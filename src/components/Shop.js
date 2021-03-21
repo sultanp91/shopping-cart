@@ -34,6 +34,33 @@ function Shop() {
       >
         Decrease
       </button>
+      <h1>{state[2].name}</h1>
+      <button
+        type='button'
+        onClick={() =>
+          dispatch({
+            type: 'increment',
+            payload: state[2].sku,
+          })
+        }
+      >
+        Increase
+      </button>
+      <p>
+        count:
+        {state[2].basket}
+      </p>
+      <button
+        type='button'
+        onClick={() =>
+          dispatch({
+            type: 'decrement',
+            payload: state[2].sku,
+          })
+        }
+      >
+        Decrease
+      </button>
     </div>
   );
 }

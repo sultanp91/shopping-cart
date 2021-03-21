@@ -14,6 +14,7 @@
   "plugins": ["react", "only-warn"],
   "rules": {
     "react/jsx-filename-extension": [0],
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "import/prefer-default-export": "off"
   }
 }

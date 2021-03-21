@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ShopContext } from './ShopContext';
 
 function Nav() {
+  const shopContext = useContext(ShopContext);
+  const [state] = shopContext;
   return (
     <div>
       <h1>Next Gen Store</h1>
@@ -14,7 +17,7 @@ function Nav() {
         </Link>
         <Link to='/cart'>
           <li>Cart</li>
-          Basket count:
+          Basket count: {state.reduce((a, item) => a + item.basket, 0)}
         </Link>
       </ul>
     </div>

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { ShopContext } from './ShopContext';
+import CartItem from './CartItem';
 
 function Cart() {
   const shopContext = useContext(ShopContext);
@@ -9,7 +10,14 @@ function Cart() {
       {state
         .filter((item) => item.basket > 0)
         .map((item) => (
-          <h1>{item.name}</h1>
+          <CartItem
+            itemName={item.name}
+            itemPrice={item.price}
+            itemSku={item.sku}
+            itemImage1={item.img1}
+            itemImage2={item.img2}
+            itemImage3={item.img3}
+          />
         ))}
     </div>
   );

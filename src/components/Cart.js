@@ -14,6 +14,7 @@ function Cart() {
             itemName={item.name}
             itemPrice={item.price}
             itemSku={item.sku}
+            itemBasket={item.basket}
             itemImage1={item.img1}
             itemImage2={item.img2}
             itemImage3={item.img3}

@@ -1,9 +1,11 @@
 import React from 'react';
 
-function ShopItem() {
+function ShopItem({ itemName, itemPic, itemPrice }) {
   return (
-    <div>
-      <p></p>
+    <div className='shop-item'>
+      <img src={`./img/${itemPic}.jpg`} alt={`${itemName}`} />
+      <p>{itemName}</p>
+      <p>{itemPrice}</p>
     </div>
   );
 }

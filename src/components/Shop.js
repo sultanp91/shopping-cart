@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
 import { ShopContext } from './ShopContext';
+import ShopItem from './ShopItem';
 
 function Shop() {
   const shopContext = useContext(ShopContext);
   const [state, dispatch] = shopContext;
   return (
     <div>
+      {state.map((item) => (
+        <ShopItem itemName={item.name} itemPic={item.img1} />
+      ))}
       Products Page
       <h1>{state[0].name}</h1>
       <button

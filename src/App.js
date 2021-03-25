@@ -5,6 +5,7 @@ import Landing from './components/Landing';
 import Nav from './components/Nav';
 import Shop from './components/Shop';
 import { ShopProvider } from './components/ShopContext';
+import ItemPage from './ItemPage';
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
         <div className='App'>
           <Nav />
           <Switch>
-            <Route exact path='/' component={Landing} />
-            <Route path='/shop' component={Shop} />
+            <Route path='/' exact component={Landing} />
+            <Route path='/shop' exact component={Shop} />
+            <Route path='/shop:id' component={ItemPage} />
             <Route path='/cart' component={Cart} />
           </Switch>
         </div>

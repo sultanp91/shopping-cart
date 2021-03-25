@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { ShopContext } from './ShopContext';
 import ShopItem from './ShopItem';
 
@@ -6,65 +7,16 @@ function Shop() {
   const shopContext = useContext(ShopContext);
   const [state, dispatch] = shopContext;
   return (
-    <div>
+    <div className='shop-container'>
       {state.map((item) => (
-        <ShopItem itemName={item.name} itemPic={item.img1} />
+        <Link to={`/shop/${item.sku}`}>
+          <ShopItem
+            itemName={item.name}
+            itemPic={item.img1}
+            itemPrice={item.price}
+          />
+        </Link>
       ))}
-      Products Page
-      <h1>{state[0].name}</h1>
-      <button
-        type='button'
-        onClick={() =>
-          dispatch({
-            type: 'increment',
-            payload: state[0].sku,
-          })
-        }
-      >
-        Increase
-      </button>
-      <p>
-        count:
-        {state[0].basket}
-      </p>
-      <button
-        type='button'
-        onClick={() =>
-          dispatch({
-            type: 'decrement',
-            payload: state[0].sku,
-          })
-        }
-      >
-        Decrease
-      </button>
-      <h1>{state[2].name}</h1>
-      <button
-        type='button'
-        onClick={() =>
-          dispatch({
-            type: 'increment',
-            payload: state[2].sku,
-          })
-        }
-      >
-        Increase
-      </button>
-      <p>
-        count:
-        {state[2].basket}
-      </p>
-      <button
-        type='button'
-        onClick={() =>
-          dispatch({
-            type: 'decrement',
-            payload: state[2].sku,
-          })
-        }
-      >
-        Decrease
-      </button>
     </div>
   );
 }

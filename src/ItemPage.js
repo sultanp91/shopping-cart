@@ -1,14 +1,13 @@
 import React, { useContext } from 'react';
-import { ShopContext } from 'react';
+import { ShopContext } from './components/ShopContext';
 
-function ItemPage() {
-  //   const shopContext = useContext(ShopContext);
-
-  //   const [state, dispatch] = shopContext;
-
+function ItemPage({ match }) {
+  const shopContext = useContext(ShopContext);
+  const [state, dispatch] = shopContext;
+  console.log(match.params.id);
   return (
     <div>
-      <h1>Working!</h1>
+      <h1>Item Page</h1>
     </div>
   );
 }

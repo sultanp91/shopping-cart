@@ -5,7 +5,7 @@ import ShopItem from './ShopItem';
 
 function Shop() {
   const shopContext = useContext(ShopContext);
-  const [state, dispatch] = shopContext;
+  const [state] = shopContext;
   return (
     <div className='shop-container'>
       {state.map((item) => (

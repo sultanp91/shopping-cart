@@ -19,6 +19,13 @@ function reducer(state, action) {
         }
         return product;
       });
+    case 'add':
+      return state.map((product) => {
+        if (product.sku === action.payload.sku) {
+          return { ...product, basket: product.basket + action.payload.count };
+        }
+        return product;
+      });
     case 'remove':
       return state.map((product) => {
         if (product.sku === action.payload && product.basket > 0) {

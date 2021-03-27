@@ -7,6 +7,7 @@ function Cart() {
   const [state] = shopContext;
   return (
     <div>
+      <h1>Cart Page</h1>
       {state
         .filter((item) => item.basket > 0)
         .map((item) => (

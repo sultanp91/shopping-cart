@@ -17,7 +17,7 @@ function Nav() {
         </Link>
         <Link to='/cart'>
           <li>Cart</li>
-          Basket count: {state.reduce((a, item) => a + item.basket, 0)}
+          Basket count: {state.reduce((acc, item) => acc + item.basket, 0)}
         </Link>
       </ul>
     </div>

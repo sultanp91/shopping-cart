@@ -7,9 +7,21 @@ function CartItem({ itemName, itemPrice, itemSku, itemBasket, itemImage1 }) {
   return (
     <div className='cart-item'>
       <h3>{itemName}</h3>
-      <img src={`./img/${itemImage1}.jpg`} alt='dss' />
+      <img src={`./img/${itemImage1}.jpg`} alt={`${itemName}`} />
       <p>{itemPrice}</p>
       <p>{itemBasket}</p>
+
+      <button
+        type='button'
+        onClick={() =>
+          dispatch({
+            type: 'decrement',
+            payload: itemSku,
+          })
+        }
+      >
+        {itemBasket === 1 ? 'Del' : 'Decrease'}
+      </button>
 
       <button
         type='button'
@@ -21,17 +33,6 @@ function CartItem({ itemName, itemPrice, itemSku, itemBasket, itemImage1 }) {
         }
       >
         Increase
-      </button>
-      <button
-        type='button'
-        onClick={() =>
-          dispatch({
-            type: 'decrement',
-            payload: itemSku,
-          })
-        }
-      >
-        Decrease
       </button>
     </div>
   );

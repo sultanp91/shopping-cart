@@ -17,10 +17,14 @@ function Cart() {
             itemSku={item.sku}
             itemBasket={item.basket}
             itemImage1={item.img1}
-            itemImage2={item.img2}
-            itemImage3={item.img3}
           />
         ))}
+      <h1>
+        £
+        {state
+          .reduce((acc, item) => acc + item.basket * item.price, 0)
+          .toFixed(2)}
+      </h1>
     </div>
   );
 }

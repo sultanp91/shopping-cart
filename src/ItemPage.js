@@ -3,7 +3,7 @@ import { ShopContext } from './components/ShopContext';
 
 function ItemPage({ match }) {
   const sku = match.params.id;
-  const [itemCount, setItemCount] = useState(0);
+  const [itemCount, setItemCount] = useState(1);
   const shopContext = useContext(ShopContext);
   const [state, dispatch] = shopContext;
   const idx = state.findIndex((item) => item.sku === sku);

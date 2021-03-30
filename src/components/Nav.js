@@ -6,7 +6,7 @@ function Nav() {
   const shopContext = useContext(ShopContext);
   const [state] = shopContext;
   return (
-    <div>
+    <nav className='nav'>
       <h1>Next Gen Store</h1>
       <ul>
         <Link to='/'>
@@ -16,11 +16,10 @@ function Nav() {
           <li>Shop</li>
         </Link>
         <Link to='/cart'>
-          <li>Cart</li>
-          Basket count: {state.reduce((acc, item) => acc + item.basket, 0)}
+          <li>Cart {state.reduce((acc, item) => acc + item.basket, 0)}</li>
         </Link>
       </ul>
-    </div>
+    </nav>
   );
 }
 

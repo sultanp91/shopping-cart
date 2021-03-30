@@ -1,0 +1,17 @@
+.nav {
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+  li {
+    font-size: 2rem;
+  }
+  a {
+    text-decoration: none;
+  }
+}

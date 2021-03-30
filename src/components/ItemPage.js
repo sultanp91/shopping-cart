@@ -1,7 +1,10 @@
 import React, { useContext, useState } from 'react';
+import Slider from 'react-slick';
 import { motion } from 'framer-motion';
 import { ShopContext } from './ShopContext';
 import { pageTransition } from './animations';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function ItemPage({ match }) {
   const sku = match.params.id;
@@ -9,6 +12,14 @@ function ItemPage({ match }) {
   const shopContext = useContext(ShopContext);
   const [state, dispatch] = shopContext;
   const idx = state.findIndex((item) => item.sku === sku);
+  const settings = {
+    arrows: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <motion.div
       variants={pageTransition}
@@ -16,6 +27,20 @@ function ItemPage({ match }) {
       animate='show'
       exit='exit'
     >
+      <div className='container'>
+        {/* // eslint-disable-next-line react/jsx-props-no-spreading */}
+        <Slider className='slider-container' {...settings}>
+          <div className='slider-container--images'>
+            <img src={`../img/${state[idx].img1}.jpg`} alt={state[idx].img1} />
+          </div>
+          <div className='slider-container--images'>
+            <img src={`../img/${state[idx].img2}.jpg`} alt={state[idx].img2} />
+          </div>
+          <div className='slider-container--images'>
+            <img src={`../img/${state[idx].img3}.jpg`} alt={state[idx].img3} />
+          </div>
+        </Slider>
+      </div>
       <h1>{state[idx].name}</h1>
       <button
         type='button'

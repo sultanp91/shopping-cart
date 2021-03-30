@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { GrCart } from 'react-icons/gr';
 import { ShopContext } from './ShopContext';
 
 function Nav() {
@@ -16,7 +17,12 @@ function Nav() {
           <li>Shop</li>
         </Link>
         <Link to='/cart'>
-          <li>Cart {state.reduce((acc, item) => acc + item.basket, 0)}</li>
+          <li className='nav-cart'>
+            <GrCart />
+            <span className='nav-basket-count'>
+              {state.reduce((acc, item) => acc + item.basket, 0)}
+            </span>
+          </li>
         </Link>
       </ul>
     </nav>

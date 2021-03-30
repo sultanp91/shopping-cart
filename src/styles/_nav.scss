@@ -7,11 +7,34 @@
     display: flex;
     justify-content: space-around;
     list-style: none;
+    padding-bottom: 1rem;
   }
   li {
     font-size: 2rem;
   }
   a {
     text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
+}
+nav {
+  box-shadow: 0 1rem 1rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+.nav-cart {
+  font-size: 3rem;
+  position: relative;
+}
+
+.nav-basket-count {
+  position: absolute;
+  top: -2rem;
+  right: -1rem;
+  padding: 0rem;
+  background-color: white;
+  border-radius: 50%;
 }

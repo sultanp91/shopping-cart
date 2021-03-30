@@ -1,5 +1,7 @@
 import React, { useContext, useState } from 'react';
-import { ShopContext } from './components/ShopContext';
+import { motion } from 'framer-motion';
+import { ShopContext } from './ShopContext';
+import { pageTransition } from './animations';
 
 function ItemPage({ match }) {
   const sku = match.params.id;
@@ -8,7 +10,12 @@ function ItemPage({ match }) {
   const [state, dispatch] = shopContext;
   const idx = state.findIndex((item) => item.sku === sku);
   return (
-    <div>
+    <motion.div
+      variants={pageTransition}
+      initial='hidden'
+      animate='show'
+      exit='exit'
+    >
       <h1>{state[idx].name}</h1>
       <button
         type='button'
@@ -36,7 +43,7 @@ function ItemPage({ match }) {
       >
         Add to Basket
       </button>
-    </div>
+    </motion.div>
   );
 }
 

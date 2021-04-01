@@ -23,5 +23,9 @@
     background-color: #2bc20e;
     color: white;
     font-weight: bold;
+    transition: all 0.5s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

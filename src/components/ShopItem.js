@@ -3,7 +3,7 @@ import React from 'react';
 function ShopItem({ itemName, itemPic, itemPrice }) {
   return (
     <div className='shop-item'>
-      <div>
+      <div className='shop-item-image'>
         <img src={`./img/${itemPic}.jpg`} alt={`${itemName}`} />
       </div>
 

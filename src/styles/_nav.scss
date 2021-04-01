@@ -23,9 +23,7 @@
       text-decoration: underline;
     }
   }
-
-  box-shadow: 0 1rem 1rem -1rem rgba(0, 0, 0, 0.3);
-  background-color: black;
+  background-color: #2d2d2d;
   color: white;
   min-height: 10vh;
   display: flex;
@@ -36,15 +34,16 @@
 }
 
 .nav-cart {
+  color: white;
   font-size: 3rem;
   position: relative;
 }
 
 .nav-basket-count {
+  color: white;
   position: absolute;
   top: -2rem;
   right: -1rem;
   padding: 0rem;
-  background-color: white;
   border-radius: 50%;
 }

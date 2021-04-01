@@ -25,12 +25,14 @@
   }
 
   box-shadow: 0 1rem 1rem -1rem rgba(0, 0, 0, 0.3);
-  background-color: #eee;
+  background-color: black;
+  color: white;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
+  margin-bottom: 1rem;
 }
 
 .nav-cart {

@@ -9,8 +9,13 @@ function Landing() {
       exit='exit'
       initial='hidden'
       animate='show'
+      className='hero'
     >
-      Landing
+      <h1>
+        Welcome to next <br />
+        generation gaming
+      </h1>
+      <button type='button'>Shop Now</button>
     </motion.div>
   );
 }

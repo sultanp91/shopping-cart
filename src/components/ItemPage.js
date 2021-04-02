@@ -27,8 +27,7 @@ function ItemPage({ match }) {
       animate='show'
       exit='exit'
     >
-      <div className='container'>
-        {/* // eslint-disable-next-line react/jsx-props-no-spreading */}
+      <div>
         <Slider className='slider-container' {...settings}>
           <div className='slider-container--images'>
             <img src={`../img/${state[idx].img1}.jpg`} alt={state[idx].img1} />

@@ -18,7 +18,7 @@ function Nav() {
         </Link>
         <Link to='/cart'>
           <li className='nav-cart'>
-            <GrCart />
+            <GrCart className='basket-icon' />
             <span className='nav-basket-count'>
               {state.reduce((acc, item) => acc + item.basket, 0)}
             </span>

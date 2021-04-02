@@ -1,7 +1,7 @@
 @import './styles/_nav.scss';
 @import './styles/_landing.scss';
 @import './styles/shop-page.scss';
-
+@import './styles/itempage.scss';
 html {
   font-size: 62.5%;
 }
@@ -14,10 +14,6 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-}
-
-.cart-item img {
-  height: 5rem;
 }
 
 p {

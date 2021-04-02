@@ -8,7 +8,9 @@ function ShopItem({ itemName, itemPic, itemPrice }) {
       </div>
 
       <p>{itemName}</p>
-      <p>{itemPrice}</p>
+      <strong>
+        <p>£{itemPrice.toFixed(2)}</p>
+      </strong>
     </div>
   );
 }

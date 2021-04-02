@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { pageTransition } from './animations';
 
 function Landing() {
@@ -15,7 +16,9 @@ function Landing() {
         Welcome to next <br />
         generation gaming
       </h1>
-      <button type='button'>Shop Now</button>
+      <Link to='/shop'>
+        <button type='button'>Shop Now</button>
+      </Link>
     </motion.div>
   );
 }

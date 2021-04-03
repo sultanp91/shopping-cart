@@ -42,7 +42,18 @@ function ItemPage({ match }) {
         </Slider>
       </div>
       <div className='item-page-description'>
-        <h1>{state[idx].name}</h1>
+        <h2>{state[idx].name}</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aliquam
+          laboriosam possimus nemo, vero nihil hic accusantium non pariatur
+          nostrum facilis ut at reiciendis, vel ipsam corrupti praesentium?
+          Quidem, nihil.
+        </p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet consectetur</li>
+          <li>Esse aliquam laboriosam possimus nemo</li>
+          <li>Vel ipsam corrupti praesentium</li>
+        </ul>
         <button
           type='button'
           onClick={() => {

@@ -1,20 +1,30 @@
 .item-page {
   display: flex !important;
+  justify-content: space-evenly;
   flex-flow: row wrap;
-  margin-top: 3rem;
+  padding-top: 3rem;
 }
 
 .slider {
-  margin-left: 5rem;
   max-width: 50rem !important;
 }
 
 .slider-container {
-  flex: 0 1 60rem !important;
+  flex: 0 1 50rem !important;
 }
 
 .item-page-description {
-  flex: 1 0 80rem;
+  flex: 0 1 60rem;
+  line-height: 1.4;
+  font-size: 2rem;
+  h2 {
+    font-size: 3rem;
+    padding: 2rem 0;
+  }
+  ul {
+    margin-left: 2rem;
+    padding: 2rem 0;
+  }
 }
 
 .slider-container-images img {

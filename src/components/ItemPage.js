@@ -30,11 +30,11 @@ function ItemPage({ match }) {
     >
       <div className='slider-container'>
         <Slider className='slider' {...settings}>
-          <img src={`../img/${state[idx].img1}.jpg`} alt={state[idx].img1} />
+          <img src={state[idx].img1} alt={state[idx].img1} />
 
-          <img src={`../img/${state[idx].img2}.jpg`} alt={state[idx].img2} />
+          <img src={state[idx].img2} alt={state[idx].img2} />
 
-          <img src={`../img/${state[idx].img3}.jpg`} alt={state[idx].img3} />
+          <img src={state[idx].img3} alt={state[idx].img3} />
         </Slider>
       </div>
       <div className='item-page-description'>

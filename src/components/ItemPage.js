@@ -26,47 +26,50 @@ function ItemPage({ match }) {
       initial='hidden'
       animate='show'
       exit='exit'
+      className='item-page'
     >
-      <div>
-        <Slider className='slider-container' {...settings}>
-          <div className='slider-container--images'>
-            <img src={`../img/${state[idx].img1}.jpg`} alt={state[idx].img1} />
-          </div>
-          <div className='slider-container--images'>
-            <img src={`../img/${state[idx].img2}.jpg`} alt={state[idx].img2} />
-          </div>
-          <div className='slider-container--images'>
-            <img src={`../img/${state[idx].img3}.jpg`} alt={state[idx].img3} />
-          </div>
+      <div className='slider-container'>
+        <Slider className='slider' {...settings}>
+          {/* <div className='slider-container-image'> */}
+          <img src={`../img/${state[idx].img1}.jpg`} alt={state[idx].img1} />
+          {/* </div> */}
+          {/* <div className='slider-container-image'> */}
+          <img src={`../img/${state[idx].img2}.jpg`} alt={state[idx].img2} />
+          {/* </div> */}
+          {/* <div className='slider-container-image'> */}
+          <img src={`../img/${state[idx].img3}.jpg`} alt={state[idx].img3} />
+          {/* </div> */}
         </Slider>
       </div>
-      <h1>{state[idx].name}</h1>
-      <button
-        type='button'
-        onClick={() => {
-          if (itemCount > 0) {
-            setItemCount(itemCount - 1);
-          }
-        }}
-      >
-        Decrease
-      </button>
-      <p>{itemCount}</p>
-      <button type='button' onClick={() => setItemCount(itemCount + 1)}>
-        Increase
-      </button>
-      <button
-        type='button'
-        onClick={() => {
-          dispatch({
-            type: 'add',
-            payload: { sku, count: itemCount },
-          });
-          setItemCount(0);
-        }}
-      >
-        Add to Basket
-      </button>
+      <div className='item-page-description'>
+        <h1>{state[idx].name}</h1>
+        <button
+          type='button'
+          onClick={() => {
+            if (itemCount > 0) {
+              setItemCount(itemCount - 1);
+            }
+          }}
+        >
+          Decrease
+        </button>
+        <p>{itemCount}</p>
+        <button type='button' onClick={() => setItemCount(itemCount + 1)}>
+          Increase
+        </button>
+        <button
+          type='button'
+          onClick={() => {
+            dispatch({
+              type: 'add',
+              payload: { sku, count: itemCount },
+            });
+            setItemCount(0);
+          }}
+        >
+          Add to Basket
+        </button>
+      </div>
     </motion.div>
   );
 }

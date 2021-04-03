@@ -13,8 +13,9 @@ function Cart() {
       initial='hidden'
       animate='show'
       exit='exit'
+      className='cart-page'
     >
-      <h1>Cart Page</h1>
+      <h2>Cart Page</h2>
       {state
         .filter((item) => item.basket > 0)
         .map((item) => (

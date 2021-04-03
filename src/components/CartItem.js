@@ -6,34 +6,41 @@ function CartItem({ itemName, itemPrice, itemSku, itemBasket, itemImage1 }) {
   const [, dispatch] = shopContext;
   return (
     <div className='cart-item'>
-      <h3>{itemName}</h3>
-      <img src={`./img/${itemImage1}.jpg`} alt={`${itemName}`} />
-      <p>{itemPrice}</p>
-      <p>{itemBasket}</p>
+      <div className='cart-item-image'>
+        <img src={`./img/${itemImage1}.jpg`} alt={`${itemName}`} />
+      </div>
+      <div className='cart-text'>
+        <h3>{itemName}</h3>
 
-      <button
-        type='button'
-        onClick={() =>
-          dispatch({
-            type: 'decrement',
-            payload: itemSku,
-          })
-        }
-      >
-        {itemBasket === 1 ? 'Del' : 'Decrease'}
-      </button>
+        <p>£{itemPrice.toFixed(2)}</p>
+        <p>Qty: {itemBasket}</p>
+        <button
+          type='button'
+          className='plus-minus-buttons'
+          onClick={() =>
+            dispatch({
+              type: 'decrement',
+              payload: itemSku,
+            })
+          }
+        >
+          {itemBasket === 1 ? 'Del' : '-'}
+        </button>
 
-      <button
-        type='button'
-        onClick={() =>
-          dispatch({
-            type: 'increment',
-            payload: itemSku,
-          })
-        }
-      >
-        Increase
-      </button>
+        <button
+          type='button'
+          className='plus-minus-buttons'
+          onClick={() =>
+            dispatch({
+              type: 'increment',
+              payload: itemSku,
+            })
+          }
+        >
+          +
+        </button>
+        <h4>Subtotal: £{(itemPrice * itemBasket).toFixed(2)}</h4>
+      </div>
     </div>
   );
 }

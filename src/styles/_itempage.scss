@@ -6,17 +6,18 @@
 }
 
 .slider {
-  max-width: 50rem !important;
+  max-width: 45rem !important;
+  height: 60rem;
 }
 
 .slider-container {
-  flex: 0 1 50rem !important;
+  flex: 1 1 50rem !important;
+  margin-left: 3rem;
 }
 
 .item-page-description {
-  flex: 0 1 60rem;
+  flex: 1 1 60rem;
   line-height: 1.4;
-  font-size: 2rem;
   h2 {
     font-size: 3rem;
     padding: 2rem 0;
@@ -27,6 +28,7 @@
   }
   li {
     padding: 0.5rem 0;
+    font-size: 1.6rem;
   }
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
@@ -60,5 +62,10 @@
 }
 
 .slider-container-images img {
-  width: 50rem;
+  width: 80%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
 }

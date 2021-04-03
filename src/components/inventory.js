@@ -22,7 +22,7 @@ export const inventory = [
     img1: PS51,
     img2: PS52,
     img3: PS53,
-    basket: 2,
+    basket: 0,
   },
   {
     name: 'Playstation 5 Digital Edition Console',

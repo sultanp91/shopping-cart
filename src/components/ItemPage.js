@@ -83,7 +83,7 @@ function ItemPage({ match }) {
           +
         </button>
         <button
-          className='checkout-button'
+          className='add-basket-button'
           type='button'
           onClick={() => {
             dispatch({

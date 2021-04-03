@@ -15,7 +15,7 @@ function Cart() {
       exit='exit'
       className='cart-page'
     >
-      <h2>Cart Page</h2>
+      <h2>Shopping Cart</h2>
       {state
         .filter((item) => item.basket > 0)
         .map((item) => (
@@ -27,12 +27,21 @@ function Cart() {
             itemImage1={item.img1}
           />
         ))}
-      <h1>
-        £
+      <h3 className='total-price'>
+        Total: £
         {state
           .reduce((acc, item) => acc + item.basket * item.price, 0)
           .toFixed(2)}
-      </h1>
+        <button
+          type='button'
+          className='checkout-button'
+          onClick={() => {
+            alert("This is a fake store! No PS5's or Xboxes here!");
+          }}
+        >
+          Checkout
+        </button>
+      </h3>
     </motion.div>
   );
 }

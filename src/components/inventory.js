@@ -1,12 +1,16 @@
+import PS51 from '../img/PS5-1.jpg';
+import PS52 from '../img/PS5-2.jpg';
+import PS53 from '../img/PS5-3.jpg';
+
 export const inventory = [
   {
     name: 'Playstation 5 Console',
     description: 'lorem ipsum',
     sku: 'ps5-001',
     price: 449.0,
-    img1: 'PS5-1',
-    img2: 'PS5-2',
-    img3: 'PS5-3',
+    img1: PS51,
+    img2: PS52,
+    img3: PS53,
     basket: 2,
   },
   {

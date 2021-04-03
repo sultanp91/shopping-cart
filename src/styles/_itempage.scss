@@ -25,6 +25,38 @@
     margin-left: 2rem;
     padding: 2rem 0;
   }
+  li {
+    padding: 0.5rem 0;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+    padding: 0.5rem 0;
+    width: 4rem;
+    margin: 0 0.5rem 0 0.5rem;
+    text-align: end;
+    font-size: 2rem;
+  }
+}
+.plus-minus-buttons {
+  padding: 0.8rem;
+  width: 2.5rem;
+  font-size: 2rem;
+  border: none;
+}
+
+.checkout-button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  width: 15rem;
+  background-color: black;
+  border: none;
+  color: white;
+  margin-left: 1rem;
 }
 
 .slider-container-images img {

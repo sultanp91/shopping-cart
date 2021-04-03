@@ -30,31 +30,33 @@ function ItemPage({ match }) {
     >
       <div className='slider-container'>
         <Slider className='slider' {...settings}>
-          {/* <div className='slider-container-image'> */}
           <img src={`../img/${state[idx].img1}.jpg`} alt={state[idx].img1} />
-          {/* </div> */}
-          {/* <div className='slider-container-image'> */}
+
           <img src={`../img/${state[idx].img2}.jpg`} alt={state[idx].img2} />
-          {/* </div> */}
-          {/* <div className='slider-container-image'> */}
+
           <img src={`../img/${state[idx].img3}.jpg`} alt={state[idx].img3} />
-          {/* </div> */}
         </Slider>
       </div>
       <div className='item-page-description'>
         <h2>{state[idx].name}</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aliquam
-          laboriosam possimus nemo, vero nihil hic accusantium non pariatur
-          nostrum facilis ut at reiciendis, vel ipsam corrupti praesentium?
-          Quidem, nihil.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus,
+          fuga placeat ad et repellat sint magni nemo tempora beatae accusantium
+          dolor tenetur mollitia laborum debitis quae perferendis aliquid earum!
+          Tenetur. Accusamus voluptatum saepe, obcaecati nihil vitae assumenda
+          debitis sunt ratione atque ab repellat quasi fuga commodi repellendus
+          est reprehenderit, porro placeat doloribus vero ducimus unde nam
+          pariatur quaerat. Quam, fuga!
         </p>
         <ul>
           <li>Lorem ipsum dolor sit amet consectetur</li>
           <li>Esse aliquam laboriosam possimus nemo</li>
           <li>Vel ipsam corrupti praesentium</li>
+          <li>Accusamus voluptatum saepe</li>
         </ul>
+
         <button
+          className='plus-minus-buttons'
           type='button'
           onClick={() => {
             if (itemCount > 0) {
@@ -62,13 +64,26 @@ function ItemPage({ match }) {
             }
           }}
         >
-          Decrease
+          -
         </button>
-        <p>{itemCount}</p>
-        <button type='button' onClick={() => setItemCount(itemCount + 1)}>
-          Increase
+        <input
+          type='number'
+          name='quantity'
+          id='quantity'
+          value={itemCount}
+          onChange={(e) => {
+            setItemCount(Number(e.target.value));
+          }}
+        />
+        <button
+          className='plus-minus-buttons'
+          type='button'
+          onClick={() => setItemCount(itemCount + 1)}
+        >
+          +
         </button>
         <button
+          className='checkout-button'
           type='button'
           onClick={() => {
             dispatch({

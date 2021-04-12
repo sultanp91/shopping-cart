@@ -13,8 +13,9 @@ function Landing() {
       className='hero'
     >
       <h1>
-        Welcome to next <br />
-        generation gaming
+        WELCOME TO NEXT
+        <br />
+        GENERATION GAMING
       </h1>
       <Link to='/shop'>
         <button type='button'>Shop Now</button>

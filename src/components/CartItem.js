@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { AiOutlineMinus, AiOutlinePlus, AiOutlineDelete } from 'react-icons/ai';
 import { ShopContext } from './ShopContext';
 
 function CartItem({ itemName, itemPrice, itemSku, itemBasket, itemImage1 }) {
@@ -24,7 +25,7 @@ function CartItem({ itemName, itemPrice, itemSku, itemBasket, itemImage1 }) {
             })
           }
         >
-          {itemBasket === 1 ? 'Del' : '-'}
+          {itemBasket === 1 ? <AiOutlineDelete /> : <AiOutlineMinus />}
         </button>
 
         <button
@@ -37,7 +38,7 @@ function CartItem({ itemName, itemPrice, itemSku, itemBasket, itemImage1 }) {
             })
           }
         >
-          +
+          <AiOutlinePlus />
         </button>
         <h4>Subtotal: £{(itemPrice * itemBasket).toFixed(2)}</h4>
       </div>

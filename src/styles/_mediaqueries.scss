@@ -1,0 +1,24 @@
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+  .slider {
+    max-width: 80vw !important;
+    height: 55rem;
+    margin: 0 auto;
+  }
+
+  .slider-container {
+    flex: 1 1 90vw !important;
+    margin: 2rem 0;
+  }
+  .slider-container img {
+    height: 45rem !important;
+    object-fit: contain;
+  }
+  .item-page-description {
+    width: 90vw;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+}

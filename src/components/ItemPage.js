@@ -90,7 +90,6 @@ function ItemPage({ match }) {
               type: 'add',
               payload: { sku, count: itemCount },
             });
-            setItemCount(0);
           }}
         >
           Add to Basket
